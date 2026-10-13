@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Onii-Chan Cafe Resto | Come a little closer</title>
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Yomogi&family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header id="siteHeader">
+    <a class="brand" href="index.html"><img class="logo-img" src="images/logo.png" alt="Onii-Chan Cafe Resto, home"></a>
+    <nav class="nav-links" aria-label="Main">
+      <a class="active" href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <button class="btn ghost" id="modeBtn" onclick="toggleTeaseMode()">Turn up the heat</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero">
+      <div class="hero-text">
+        <h1 id="tagline">Come a little closer... the tempura is hot, and so are we.</h1>
+        <p id="greeting">Our staff are waiting at the door. Don't keep them waiting, okay?</p>
+        <div class="hero-actions">
+          <button class="btn" id="bellBtn" onclick="ringBell()">Ring the bell</button>
+          <a class="btn butter" href="menu.html">See the menu</a>
+        </div>
+      </div>
+      <div class="hero-art" id="heroArt">
+        <img src="images/logo.png" alt="Onii-Chan Cafe Resto emblem: a winking girl in a pink chef hat">
+        <span class="stamp">open till midnight</span>
+      </div>
+    </section>
+
+    <section id="bestseller">
+      <div class="wrap">
+        <h2>The one everybody orders</h2>
+        <p class="lead">Hover over it. It has opinions about you.</p>
+        <article id="bestsellerCard" onmouseover="teaseBestseller()" onmouseout="calmBestseller()" onclick="ringBell()">
+          <div class="bs-photo">
+            <div class="bs-frame"><span aria-hidden="true">🍤</span><img src="images/tempura.jpg" alt="Fried tempura set" onerror="hideBrokenImage(this)"></div>
+            <span class="caption">fresh out of the fryer</span>
+          </div>
+          <div class="bs-text">
+            <span class="kicker">best seller, no contest</span>
+            <h3 id="bestsellerTitle">Fried Tempura Set</h3>
+            <p id="bestsellerText">Golden, crispy shrimp tempura served piping hot, with a dipping sauce you'll want to lick off the plate. ₱280</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="behind">
+      <div class="wrap">
+        <h2>Scribbled on the kitchen wall</h2>
+        <div class="notes">
+          <p class="note">Shrimp go in the oil the second you order. We're watching the fryer, not you. Mostly.</p>
+          <p class="note">Ask for extra sauce. We'll pretend to think about it first.</p>
+          <p class="note">Last order is 11:30 PM. Stay till we close and we'll tell you your fortune.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <img src="images/logo.png" alt="">
+    <p>Onii-Chan Cafe Resto. Open daily 11 AM to midnight. Guests 18+ after 9 PM, please behave.</p>
+  </footer>
+  <div id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>

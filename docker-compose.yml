@@ -1,0 +1,7 @@
+services:
+  onii-chan-cafe:
+    build: .
+    container_name: onii-chan-cafe
+    ports:
+      - "8080:80"
+    restart: unless-stopped
